@@ -8,9 +8,9 @@ import (
 const pi = math.Pi
 
 type Geometry interface {
-	area() float64
-	perimetr() float64
-	getArgs() string
+	Area() float64
+	Perimetr() float64
+	GetArgs() string
 }
 
 type Rectangle struct {
@@ -40,7 +40,7 @@ type Triangle struct {
 	h float64
 }
 
-func newTriangle(a float64, b float64, c float64, h float64) Triangle {
+func NewTriangle(a float64, b float64, c float64, h float64) Triangle {
 	return Triangle{a, b, c, h}
 }
 
@@ -60,7 +60,7 @@ type Circle struct {
 	r float64
 }
 
-func newCircle(r float64) Circle {
+func NewCircle(r float64) Circle {
 	return Circle{r}
 }
 func (c Circle) GetArgs() string {
